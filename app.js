@@ -132,21 +132,52 @@ document.addEventListener("DOMContentLoaded", () => {
       displayFamily: "'Bricolage Grotesque', sans-serif",
       bodyFamily: "'Cormorant Garamond', serif"
     },
+    modern_bangla: {
+      displayFamily: "'Anek Bangla', sans-serif",
+      bodyFamily: "'Hind Siliguri', sans-serif"
+    },
+    literary_bangla: {
+      displayFamily: "'Tiro Bangla', serif",
+      bodyFamily: "'Noto Serif Bengali', serif"
+    },
+    signature_bangla: {
+      displayFamily: "'Galada', cursive",
+      bodyFamily: "'Noto Sans Bengali', sans-serif"
+    },
+    playful_bangla: {
+      displayFamily: "'Baloo Da 2', sans-serif",
+      bodyFamily: "'Mina', sans-serif"
+    },
+    handwritten_bangla: {
+      displayFamily: "'Atma', cursive",
+      bodyFamily: "'Hind Siliguri', sans-serif"
+    },
   };
 
   const primaryInput = document.getElementById("primary-input");
   const secondaryInput = document.getElementById("secondary-input");
+  const primaryInputBn = document.getElementById("primary-input-bn");
+  const secondaryInputBn = document.getElementById("secondary-input-bn");
+  
   const detailParagraphInput = document.getElementById("detail-paragraph-input");
+  const detailParagraphInputBn = document.getElementById("detail-paragraph-input-bn");
   const detailMetaInput = document.getElementById("detail-meta-input");
+  const detailMetaInputBn = document.getElementById("detail-meta-input-bn");
+  
   const layoutBtns = document.querySelectorAll(".layout-btn");
+  const layoutBtnsBn = document.querySelectorAll(".layout-btn-bn");
   const themeToggle = document.getElementById("theme-toggle");
 
-  let activeLayout = "primary-display"; // or "primary-cursive"
+  let activeLayoutEn = "primary-display"; // or "primary-cursive"
+  let activeLayoutBn = "primary-display"; // or "primary-cursive"
 
   // Main layout rendering and style engine
   const renderPairings = () => {
-    const primaryText = primaryInput.value.trim() || "current";
-    const secondaryText = secondaryInput.value.trim() || "against the";
+    const primaryTextEn = primaryInput.value.trim() || "current";
+    const secondaryTextEn = secondaryInput.value.trim() || "against the";
+    
+    const primaryTextBn = primaryInputBn.value.trim() || "বিপরীতে";
+    const secondaryTextBn = secondaryInputBn.value.trim() || "স্রোতের";
     
     for (const [key, config] of Object.entries(fontPairings)) {
       const card = document.querySelector(`.pairing-card[data-pairing="${key}"]`);
@@ -155,8 +186,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const pLine = card.querySelector(".line-primary");
       const sLine = card.querySelector(".line-secondary");
       
-      if (pLine) pLine.textContent = primaryText;
-      if (sLine) sLine.textContent = secondaryText;
+      const isBangla = key.endsWith("_bangla");
+      
+      if (pLine) pLine.textContent = isBangla ? primaryTextBn : primaryTextEn;
+      if (sLine) sLine.textContent = isBangla ? secondaryTextBn : secondaryTextEn;
       
       // Apply card-specific color settings
       const pColorPreview = card.querySelector(".primary-color-preview");
@@ -178,8 +211,10 @@ document.addEventListener("DOMContentLoaded", () => {
         sLine.style.marginBottom = "0.25rem";
       }
       
+      const currentActiveLayout = isBangla ? activeLayoutBn : activeLayoutEn;
+      
       // Determine font sizing and positioning maps based on active layout toggle
-      if (activeLayout === "primary-display") {
+      if (currentActiveLayout === "primary-display") {
         // Line Primary is Dominant Display (Font 1)
         if (pLine) {
           pLine.style.fontFamily = config.displayFamily;
@@ -257,39 +292,119 @@ document.addEventListener("DOMContentLoaded", () => {
           } else if (key === "condensed") {
             sLine.style.textTransform = "uppercase";
             sLine.style.fontSize = "1.8rem";
-            sLine.style.fontWeight = "400";
-          } else if (key === "embellish") {
-            sLine.style.textTransform = "uppercase";
-            sLine.style.fontSize = "2.8rem";
-            sLine.style.fontWeight = "400";
-            sLine.style.letterSpacing = "0.5px";
-            sLine.style.marginBottom = "0.2rem";
-          }
-        }
-      }
-    }
-    
-    // Update detail specimens
+             sLine.style.fontWeight = "400";
+           } else if (key === "embellish") {
+             sLine.style.textTransform = "uppercase";
+             sLine.style.fontSize = "2.8rem";
+             sLine.style.fontWeight = "400";
+             sLine.style.letterSpacing = "0.5px";
+             sLine.style.marginBottom = "0.2rem";
+           }
+         }
+       }
+ 
+       // Specific Bangla layout tweaks
+       if (key.endsWith("_bangla")) {
+         if (pLine) {
+           pLine.style.lineHeight = "1.4";
+           pLine.style.textTransform = "none";
+           pLine.style.letterSpacing = "normal";
+           
+           if (currentActiveLayout === "primary-display") {
+             if (key === "signature_bangla") {
+               pLine.style.fontSize = "3.6rem";
+             } else if (key === "playful_bangla") {
+               pLine.style.fontSize = "3.2rem";
+             } else if (key === "handwritten_bangla") {
+               pLine.style.fontSize = "3.2rem";
+             }
+           } else {
+             // Accent layout active (Line primary is bodyFamily)
+             if (key === "literary_bangla") {
+               pLine.style.fontSize = "2.8rem";
+             } else if (key === "signature_bangla") {
+               pLine.style.fontSize = "2.6rem";
+             }
+           }
+         }
+         
+         if (sLine) {
+           sLine.style.lineHeight = "1.4";
+           sLine.style.textTransform = "none";
+           sLine.style.letterSpacing = "normal";
+           
+           if (currentActiveLayout === "primary-display") {
+             // Line secondary is bodyFamily
+             if (key === "signature_bangla") {
+               sLine.style.fontSize = "2.0rem";
+             } else if (key === "playful_bangla") {
+               sLine.style.fontSize = "1.8rem";
+             }
+           } else {
+             // Accent layout active (Line secondary is displayFamily)
+             if (key === "signature_bangla") {
+               sLine.style.fontSize = "3.2rem";
+             } else if (key === "playful_bangla") {
+               sLine.style.fontSize = "2.8rem";
+             } else if (key === "handwritten_bangla") {
+               sLine.style.fontSize = "2.8rem";
+             }
+           }
+         }
+       }
+     }
+     
+     // Update detail specimens
     const detailStory = document.getElementById("preview-detail-story");
+    const detailStoryBn = document.getElementById("preview-detail-story-bn");
     const detailMeta = document.getElementById("preview-detail-meta");
+    const detailMetaBn = document.getElementById("preview-detail-meta-bn");
+    
     if (detailStory && detailParagraphInput) detailStory.textContent = detailParagraphInput.value;
+    if (detailStoryBn && detailParagraphInputBn) detailStoryBn.textContent = detailParagraphInputBn.value;
     if (detailMeta && detailMetaInput) detailMeta.textContent = detailMetaInput.value.toUpperCase();
+    if (detailMetaBn && detailMetaInputBn) detailMetaBn.textContent = detailMetaInputBn.value.toUpperCase();
+    updateAllCardColors();
   };
 
   // Input event listeners
   primaryInput.addEventListener("input", renderPairings);
   secondaryInput.addEventListener("input", renderPairings);
+  primaryInputBn.addEventListener("input", renderPairings);
+  secondaryInputBn.addEventListener("input", renderPairings);
   detailParagraphInput.addEventListener("input", renderPairings);
+  detailParagraphInputBn.addEventListener("input", renderPairings);
   detailMetaInput.addEventListener("input", renderPairings);
+  detailMetaInputBn.addEventListener("input", renderPairings);
 
-  // Toggle layout event listeners
+  // Toggle layout event listeners (English)
   layoutBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       layoutBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       
-      activeLayout = btn.getAttribute("data-layout");
+      activeLayoutEn = btn.getAttribute("data-layout");
       renderPairings();
+    });
+  });
+
+  // Toggle layout event listeners (Bengali)
+  layoutBtnsBn.forEach(btn => {
+    btn.addEventListener("click", () => {
+      layoutBtnsBn.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      
+      activeLayoutBn = btn.getAttribute("data-layout");
+      renderPairings();
+    });
+  });
+
+  // Navigation link active toggles
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
     });
   });
 
@@ -303,12 +418,46 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("color-scheme", newTheme);
   });
 
+  const updateCardColors = (card) => {
+    const pPreview = card.querySelector(".primary-color-preview");
+    const sPreview = card.querySelector(".secondary-color-preview");
+    if (!pPreview || !sPreview) return;
+    
+    const primaryColor = pPreview.style.backgroundColor;
+    const secondaryColor = sPreview.style.backgroundColor;
+    
+    const pLines = card.querySelectorAll(".line-primary");
+    const sLines = card.querySelectorAll(".line-secondary");
+    
+    pLines.forEach(line => {
+      if (line.classList.contains("tech-tag-red") || line.classList.contains("bar-line")) {
+        line.style.backgroundColor = primaryColor;
+      } else {
+        line.style.color = primaryColor;
+      }
+    });
+    
+    sLines.forEach(line => {
+      if (line.classList.contains("tech-tag-red") || line.classList.contains("bar-line")) {
+        line.style.backgroundColor = secondaryColor;
+      } else {
+        line.style.color = secondaryColor;
+      }
+    });
+  };
+
+  const updateAllCardColors = () => {
+    const cards = document.querySelectorAll(".pairing-card, .detail-style-card");
+    cards.forEach(card => updateCardColors(card));
+  };
+
   // Initialize color indicators and drop downs
   const initColorPickers = () => {
-    const cards = document.querySelectorAll(".pairing-card");
+    const cards = document.querySelectorAll(".pairing-card, .detail-style-card");
     cards.forEach(card => {
       const pPreview = card.querySelector(".primary-color-preview");
       const sPreview = card.querySelector(".secondary-color-preview");
+      if (!pPreview || !sPreview) return;
       
       const pDropdown = pPreview.nextElementSibling;
       const sDropdown = sPreview.nextElementSibling;

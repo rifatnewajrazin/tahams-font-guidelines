@@ -47,6 +47,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -306,7 +307,7 @@ body {
 
 @media (min-width: 992px) {
   .toolbar-grid {
-    grid-template-columns: 1fr 1fr auto;
+    grid-template-columns: 1.2fr 1.2fr auto auto;
   }
 }
 
@@ -344,6 +345,7 @@ body {
 .toggle-field-group {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.6rem;
 }
 
@@ -353,6 +355,7 @@ body {
   letter-spacing: 1px;
   font-weight: 700;
   color: var(--text-secondary);
+  text-align: center;
 }
 
 .toggle-btn-group {
@@ -364,7 +367,7 @@ body {
   gap: 0.2rem;
 }
 
-.layout-btn {
+.layout-btn, .layout-btn-bn, .lang-btn {
   background: transparent;
   border: none;
   color: var(--text-secondary);
@@ -377,38 +380,44 @@ body {
   white-space: nowrap;
 }
 
-.layout-btn.active {
+.layout-btn.active, .layout-btn-bn.active, .lang-btn.active {
   background-color: var(--text-primary);
   color: var(--bg-primary);
   font-weight: 700;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
 }
 
-[data-theme="light"] .layout-btn.active {
+[data-theme="light"] .layout-btn.active, [data-theme="light"] .layout-btn-bn.active, [data-theme="light"] .lang-btn.active {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.layout-btn:hover:not(.active) {
+.layout-btn:hover:not(.active), .layout-btn-bn:hover:not(.active), .lang-btn:hover:not(.active) {
   color: var(--text-primary);
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-[data-theme="light"] .layout-btn:hover:not(.active) {
+[data-theme="light"] .layout-btn:hover:not(.active), [data-theme="light"] .lang-btn:hover:not(.active) {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
 /* Secondary toolbar inputs row for detail specimens */
 .toolbar-details-row {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
   border-top: 1px solid var(--border-primary);
   padding-top: 1.5rem;
 }
 
+.toolbar-details-row.spec-row {
+  border-top: none;
+  padding-top: 0;
+}
+
 @media (min-width: 768px) {
-  .toolbar-details-row {
-    grid-template-columns: 2fr 1fr;
+  .toolbar-details-row.spec-row {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -1706,4 +1715,103 @@ body {
   white-space: nowrap;
   pointer-events: none;
   color: #ffb703 !important;
+}
+
+/* --- Bangla Font Pairing Specimen Targets --- */
+.font-modern_bangla-target .line-primary {
+  font-family: 'Anek Bangla', sans-serif !important;
+}
+.font-modern_bangla-target .line-secondary {
+  font-family: 'Hind Siliguri', sans-serif !important;
+}
+
+.font-literary_bangla-target .line-primary {
+  font-family: 'Tiro Bangla', serif !important;
+  font-style: italic !important;
+}
+.font-literary_bangla-target .line-secondary {
+  font-family: 'Noto Serif Bengali', serif !important;
+}
+
+.font-signature_bangla-target .line-primary {
+  font-family: 'Galada', cursive !important;
+}
+.font-signature_bangla-target .line-secondary {
+  font-family: 'Noto Sans Bengali', sans-serif !important;
+}
+
+.font-playful_bangla-target .line-primary {
+  font-family: 'Baloo Da 2', sans-serif !important;
+}
+.font-playful_bangla-target .line-secondary {
+  font-family: 'Mina', sans-serif !important;
+}
+
+.font-handwritten_bangla-target .line-primary {
+  font-family: 'Atma', cursive !important;
+}
+.font-handwritten_bangla-target .line-secondary {
+  font-family: 'Hind Siliguri', sans-serif !important;
+}
+
+/* --- Dual Input Panels Toolbar Styles --- */
+.workspace-inputs-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .workspace-inputs-layout {
+    flex-direction: row;
+  }
+}
+
+.workspace-panel {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--border-primary);
+  border-radius: 18px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+[data-theme="light"] .workspace-panel {
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+.panel-header {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-primary);
+  border-bottom: 1px dashed var(--border-primary);
+  padding-bottom: 0.5rem;
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 480px) {
+  .panel-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- Dedicated Bengali Specimen Container --- */
+.bengali-specimen-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  border-top: 1px solid var(--border-primary);
+  padding-top: 3.5rem;
+  margin-top: 1.5rem;
 }
