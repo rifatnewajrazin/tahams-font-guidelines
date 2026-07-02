@@ -68,38 +68,90 @@
       </div>
     </header>
 
-    <!-- Customizer Toolbar (English) -->
-    <section class="controls-toolbar" id="english-workspace">
-      <div class="toolbar-title">Slogan & Detail Workspace (English)</div>
-      
-      <div class="workspace-inputs-layout">
-        <!-- English Section -->
-        <div class="workspace-panel">
-          <div class="panel-header">English Campaign Text</div>
-          <div class="panel-grid">
-            <div class="input-field-group">
-              <label for="secondary-input">Supporting Text (Font 2)</label>
-              <input type="text" id="secondary-input" value="against the">
-            </div>
-            <div class="input-field-group">
-              <label for="primary-input">Highlight Text (Font 1)</label>
-              <input type="text" id="primary-input" value="current">
+    <!-- English Slogan Section Wrapper -->
+    <div class="section-container" id="english-slogan-section">
+      <!-- Customizer Toolbar (English) -->
+      <section class="controls-toolbar compact" id="english-workspace">
+        <!-- Row 1: Texts + Style -->
+        <div class="toolbar-row">
+          <div class="input-field-group compact">
+            <label for="secondary-input">Supporting</label>
+            <input type="text" id="secondary-input" value="against the" style="width: 180px;">
+          </div>
+          <div class="input-field-group compact">
+            <label for="primary-input">Highlight</label>
+            <input type="text" id="primary-input" value="current" style="width: 160px;">
+          </div>
+          <div class="toggle-field-group compact">
+            <label>Style</label>
+            <div class="toggle-btn-group">
+              <button class="layout-btn active" data-layout="primary-display">Bold</button>
+              <button class="layout-btn" data-layout="primary-cursive">Cursive</button>
             </div>
           </div>
         </div>
-      </div>
+        
+        <!-- Row 2: Spacing + Sizes -->
+        <div class="toolbar-row">
+          <!-- Line Spacing -->
+          <div class="leading-control-group compact">
+            <label>Spacing</label>
+            <div class="leading-input-wrapper">
+              <span class="leading-icon-span" title="Line Spacing">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M3 4v16M1 7l2-3 2 3M1 17l2 3 2-3" />
+                  <path d="M12 5l2.5 6h-5z" />
+                  <path d="M12 13l2.5 6h-5z" />
+                </svg>
+              </span>
+              <input type="number" id="spacing-input-en" value="6" class="leading-num-input">
+              <span class="leading-unit">px</span>
+              <div class="leading-spin-buttons">
+                <button class="spin-btn up">▲</button>
+                <button class="spin-btn down">▼</button>
+              </div>
+            </div>
+          </div>
 
-      <div class="toolbar-details-row">
-        <!-- Text style selector -->
-        <div class="toggle-field-group">
-          <label>Dominant Text Style</label>
-          <div class="toggle-btn-group">
-            <button class="layout-btn active" data-layout="primary-display">Bold Display</button>
-            <button class="layout-btn" data-layout="primary-cursive">Cursive Accent</button>
+          <div class="toolbar-divider"></div>
+
+          <!-- Font Size 1 -->
+          <div class="leading-control-group compact">
+            <label>Size 1</label>
+            <div class="leading-input-wrapper">
+              <span class="leading-icon-span" title="Font Size 1">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+                </svg>
+              </span>
+              <input type="number" id="font-size-1-en" value="51" class="leading-num-input">
+              <span class="leading-unit">px</span>
+              <div class="leading-spin-buttons">
+                <button class="spin-btn up">▲</button>
+                <button class="spin-btn down">▼</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Font Size 2 -->
+          <div class="leading-control-group compact">
+            <label>Size 2</label>
+            <div class="leading-input-wrapper">
+              <span class="leading-icon-span" title="Font Size 2">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+                </svg>
+              </span>
+              <input type="number" id="font-size-2-en" value="29" class="leading-num-input">
+              <span class="leading-unit">px</span>
+              <div class="leading-spin-buttons">
+                <button class="spin-btn up">▲</button>
+                <button class="spin-btn down">▼</button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     
     <!-- Pairing Grid -->
     <main class="pairing-grid">
@@ -996,7 +1048,6 @@
           <div class="category-badge">Elegant Serif + Swash Script</div>
         </div>
         <div class="card-body font-healing_time-target">
-          <div class="time-oval-badge">2026</div>
           <div class="line-secondary">against the</div>
           <div class="line-primary">current</div>
         </div>
@@ -1111,8 +1162,6 @@
           <div class="category-badge">Wide Sans + Plain</div>
         </div>
         <div class="card-body font-sunday_vibes-target">
-          <!-- Sun decoration shape -->
-          <svg class="sun-icon-decor" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom: 0.5rem; color: var(--text-tertiary);"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M5.64 18.36l-1.42 1.42M19.78 4.22l-1.42 1.42"/></svg>
           <div class="line-secondary">against the</div>
           <div class="line-primary">current</div>
         </div>
@@ -1170,7 +1219,6 @@
           <div class="category-badge">Varsity Curved + Sans</div>
         </div>
         <div class="card-body font-take_time-target">
-          <div class="camera-tech-tag">HB2 // VSCO</div>
           <div class="line-secondary">against the</div>
           <div class="line-primary">current</div>
         </div>
@@ -1286,11 +1334,7 @@
         </div>
         <div class="card-body font-stronger_with-target">
           <div class="line-secondary">against the</div>
-          <div class="stronger-footer-group">
-            <div class="capsule-arrow-box">➔</div>
-            <div class="line-primary">current</div>
-            <span class="trademark-stamps">™ © ®</span>
-          </div>
+          <div class="line-primary">current</div>
         </div>
         <div class="card-color-bar">
           <div class="color-indicators">
@@ -1460,16 +1504,8 @@
           <div class="category-badge">Serif Italic + Bold Serif Caps</div>
         </div>
         <div class="card-body font-beautiful_sunset-target">
-          <div class="sunset-top-line">
-            <div class="line-secondary">against the</div>
-            <div class="sunset-oval-of">OF</div>
-          </div>
-          <div class="sunset-bottom-line">
-            <span class="sunset-arrow">➔</span>
-            <div class="line-primary">current</div>
-            <span class="sunset-copyright">©</span>
-            <span class="sunset-location-stamp">Lok Bahu, Samarinda.</span>
-          </div>
+          <div class="line-secondary">against the</div>
+          <div class="line-primary">current</div>
         </div>
         <div class="card-color-bar">
           <div class="color-indicators">
@@ -1582,10 +1618,7 @@
           <div class="category-badge">Serif Roman + Serif Italic</div>
         </div>
         <div class="card-body font-romance_untold-target">
-          <div class="romance-tech-left">09</div>
-          <div class="romance-tech-right">2026</div>
           <div class="line-secondary">against the</div>
-          <div class="romance-flat-oval">AT SEMESTA'S GALLERY</div>
           <div class="line-primary">current</div>
         </div>
         <div class="card-color-bar">
@@ -1643,7 +1676,7 @@
         </div>
         <div class="card-body font-remember_this-target">
           <div class="line-secondary">against the</div>
-          <div class="remember-oval-badge">remember</div>
+          <div class="line-primary">current</div>
         </div>
         <div class="card-color-bar">
           <div class="color-indicators">
@@ -1756,14 +1789,8 @@
           <div class="category-badge">Serif + Cursive Stack</div>
         </div>
         <div class="card-body font-sea_energy-target">
-          <div class="sea-top-stamp">At Pancer Beach, Jember</div>
-          <div class="sea-vertical-stack">
-            <div class="sea-row-1">Sea</div>
-            <div class="sea-row-2">needs</div>
-            <div class="sea-row-3">more</div>
-            <div class="line-primary sea-row-4">energy.</div>
-          </div>
-          <div class="sea-bottom-stamp">Captured by Cahyanimldd</div>
+          <div class="line-secondary">against the</div>
+          <div class="line-primary">current</div>
         </div>
         <div class="card-color-bar">
           <div class="color-indicators">
@@ -1933,9 +1960,8 @@
           <div class="category-badge">Three-Tier Hybrid Stack</div>
         </div>
         <div class="card-body font-finding_stillness-target">
-          <div class="stillness-line-1">finding</div>
-          <div class="line-primary stillness-line-2">current</div>
-          <div class="stillness-line-3">at the top.</div>
+          <div class="line-secondary">against the</div>
+          <div class="line-primary">current</div>
         </div>
         <div class="card-color-bar">
           <div class="color-indicators">
@@ -1978,22 +2004,85 @@
           <p>Inspired by <em>finding Stillness at the top.</em>. Three-tier campaign slogan mix with light serif italics, bold rounded sans, and regular serifs.</p>
         </div>
       </section>
-    </main>
+    </div><!-- Close English Slogan Section -->
 
-    <!-- English Details Control Panel -->
-    <section class="controls-toolbar details-control-panel" id="detail-specimen" style="margin-top: 3.5rem; margin-bottom: 2rem;">
-      <div class="toolbar-title">Details & Metadata Workspace (English)</div>
-      <div class="toolbar-details-row spec-row" style="border-top: none; padding-top: 0;">
-        <div class="input-field-group">
-          <label for="detail-paragraph-input">Detail Story (English)</label>
-          <input type="text" id="detail-paragraph-input" value="Life is like a train journey; people come and go at different stations, leaving behind memories and lessons that remain eternal.">
+    <!-- English Details Section Wrapper -->
+    <div class="section-container" id="english-details-section">
+      <!-- English Details Control Panel -->
+      <section class="controls-toolbar compact" id="detail-specimen">
+        <!-- Row 1: Story & Meta Texts -->
+        <div class="toolbar-row">
+          <div class="input-field-group compact">
+            <label for="detail-paragraph-input">Story</label>
+            <input type="text" id="detail-paragraph-input" value="Life is like a train journey; people come and go at different stations, leaving behind memories and lessons that remain eternal." style="width: 320px;">
+          </div>
+          <div class="input-field-group compact">
+            <label for="detail-meta-input">Meta</label>
+            <input type="text" id="detail-meta-input" value="COLWAY: SAND BEIGE • SIZE: XL • 100% COMBED COTTON • ARCHIVE 2K25" style="width: 280px;">
+          </div>
         </div>
-        <div class="input-field-group">
-          <label for="detail-meta-input">Product Label Meta (English)</label>
-          <input type="text" id="detail-meta-input" value="COLWAY: SAND BEIGE • SIZE: XL • 100% COMBED COTTON • ARCHIVE 2K25">
+        
+        <!-- Row 2: Typography parameters -->
+        <div class="toolbar-row">
+          <!-- Line Spacing for English Details -->
+          <div class="leading-control-group compact">
+            <label>Spacing</label>
+            <div class="leading-input-wrapper">
+              <span class="leading-icon-span" title="Line Spacing">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M3 4v16M1 7l2-3 2 3M1 17l2 3 2-3" />
+                  <path d="M12 5l2.5 6h-5z" />
+                  <path d="M12 13l2.5 6h-5z" />
+                </svg>
+              </span>
+              <input type="number" id="spacing-input-en-details" value="6" class="leading-num-input">
+              <span class="leading-unit">px</span>
+              <div class="leading-spin-buttons">
+                <button class="spin-btn up">▲</button>
+                <button class="spin-btn down">▼</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="toolbar-divider"></div>
+
+          <!-- Font Size 1 for English Details -->
+          <div class="leading-control-group compact">
+            <label>Size 1</label>
+            <div class="leading-input-wrapper">
+              <span class="leading-icon-span" title="Font Size 1">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+                </svg>
+              </span>
+              <input type="number" id="font-size-1-en-details" value="12" class="leading-num-input">
+              <span class="leading-unit">px</span>
+              <div class="leading-spin-buttons">
+                <button class="spin-btn up">▲</button>
+                <button class="spin-btn down">▼</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Font Size 2 for English Details -->
+          <div class="leading-control-group compact">
+            <label>Size 2</label>
+            <div class="leading-input-wrapper">
+              <span class="leading-icon-span" title="Font Size 2">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+                </svg>
+              </span>
+              <input type="number" id="font-size-2-en-details" value="12" class="leading-num-input">
+              <span class="leading-unit">px</span>
+              <div class="leading-spin-buttons">
+                <button class="spin-btn up">▲</button>
+                <button class="spin-btn down">▼</button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     <!-- Details and Filler Section (English) -->
     <section class="detail-specimen-section" id="detail-specimen-en" style="margin-bottom: 3.5rem;">
@@ -2242,6 +2331,7 @@
 
       </div>
     </section>
+    </div><!-- Close English Details Section -->
 
     <!-- Dedicated Bengali Specimen Section -->
     <section class="bengali-specimen-section" id="bengali-specimen">
@@ -2250,38 +2340,90 @@
         <p>Curated Bangla typefaces and campaign pairings tailored for Tahams collections.</p>
       </div>
 
-      <!-- Customizer Toolbar (Bengali) -->
-      <section class="controls-toolbar" id="bengali-workspace" style="margin-bottom: 3.5rem;">
-        <div class="toolbar-title">Slogan & Detail Workspace (Bengali)</div>
-        
-        <div class="workspace-inputs-layout">
-          <!-- Bengali Section -->
-          <div class="workspace-panel">
-            <div class="panel-header">Bengali Campaign Text</div>
-            <div class="panel-grid">
-              <div class="input-field-group">
-                <label for="secondary-input-bn">Supporting Text (Font 2)</label>
-                <input type="text" id="secondary-input-bn" value="স্রোতের">
-              </div>
-              <div class="input-field-group">
-                <label for="primary-input-bn">Highlight Text (Font 1)</label>
-                <input type="text" id="primary-input-bn" value="বিপরীতে">
+      <!-- Bengali Slogan Section Wrapper -->
+      <div class="section-container" id="bengali-slogan-section">
+        <!-- Customizer Toolbar (Bengali) -->
+        <section class="controls-toolbar compact" id="bengali-workspace" style="margin-bottom: 3.5rem;">
+          <!-- Row 1: Texts + Style -->
+          <div class="toolbar-row">
+            <div class="input-field-group compact">
+              <label for="secondary-input-bn">Supporting</label>
+              <input type="text" id="secondary-input-bn" value="স্রোতের" style="width: 180px;">
+            </div>
+            <div class="input-field-group compact">
+              <label for="primary-input-bn">Highlight</label>
+              <input type="text" id="primary-input-bn" value="বিপরীতে" style="width: 160px;">
+            </div>
+            <div class="toggle-field-group compact">
+              <label>Style</label>
+              <div class="toggle-btn-group">
+                <button class="layout-btn-bn active" data-layout="primary-display">Bold</button>
+                <button class="layout-btn-bn" data-layout="primary-cursive">Cursive</button>
               </div>
             </div>
           </div>
-        </div>
+          
+          <!-- Row 2: Spacing + Sizes -->
+          <div class="toolbar-row">
+            <!-- Line Spacing for Bengali -->
+            <div class="leading-control-group compact">
+              <label>Spacing</label>
+              <div class="leading-input-wrapper">
+                <span class="leading-icon-span" title="Line Spacing">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M3 4v16M1 7l2-3 2 3M1 17l2 3 2-3" />
+                    <path d="M12 5l2.5 6h-5z" />
+                    <path d="M12 13l2.5 6h-5z" />
+                  </svg>
+                </span>
+                <input type="number" id="spacing-input-bn" value="6" class="leading-num-input">
+                <span class="leading-unit">px</span>
+                <div class="leading-spin-buttons">
+                  <button class="spin-btn up">▲</button>
+                  <button class="spin-btn down">▼</button>
+                </div>
+              </div>
+            </div>
 
-        <div class="toolbar-details-row">
-          <!-- Text style selector for Bengali -->
-          <div class="toggle-field-group">
-            <label>Dominant Text Style</label>
-            <div class="toggle-btn-group">
-              <button class="layout-btn-bn active" data-layout="primary-display">Bold Display</button>
-              <button class="layout-btn-bn" data-layout="primary-cursive">Cursive Accent</button>
+            <div class="toolbar-divider"></div>
+
+            <!-- Font Size 1 for Bengali -->
+            <div class="leading-control-group compact">
+              <label>Size 1</label>
+              <div class="leading-input-wrapper">
+                <span class="leading-icon-span" title="Font Size 1">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+                  </svg>
+                </span>
+                <input type="number" id="font-size-1-bn" value="51" class="leading-num-input">
+                <span class="leading-unit">px</span>
+                <div class="leading-spin-buttons">
+                  <button class="spin-btn up">▲</button>
+                  <button class="spin-btn down">▼</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Font Size 2 for Bengali -->
+            <div class="leading-control-group compact">
+              <label>Size 2</label>
+              <div class="leading-input-wrapper">
+                <span class="leading-icon-span" title="Font Size 2">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+                  </svg>
+                </span>
+                <input type="number" id="font-size-2-bn" value="29" class="leading-num-input">
+                <span class="leading-unit">px</span>
+                <div class="leading-spin-buttons">
+                  <button class="spin-btn up">▲</button>
+                  <button class="spin-btn down">▼</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <div class="pairing-grid">
         <!-- 33. Bold Modern Sans Pairing -->
@@ -2573,23 +2715,86 @@
             <p>Inspired by <em>Atma + Hind Siliguri</em>. Raw, hand-drawn organic headline combined with clean base text structure.</p>
           </div>
         </section>
-      </div>
+      </div><!-- Close Bengali Slogan Section -->
     </section>
 
-    <!-- Bengali Details Control Panel -->
-    <section class="controls-toolbar details-control-panel" id="bengali-details-control" style="margin-top: 3.5rem; margin-bottom: 2rem;">
-      <div class="toolbar-title">Details & Metadata Workspace (Bengali)</div>
-      <div class="toolbar-details-row spec-row" style="border-top: none; padding-top: 0;">
-        <div class="input-field-group">
-          <label for="detail-paragraph-input-bn">Detail Story (Bengali)</label>
-          <input type="text" id="detail-paragraph-input-bn" value="জীবন একটি ট্রেনের মতো; মানুষ বিভিন্ন স্টেশনে আসে এবং চলে যায়, রেখে যায় কিছু স্মৃতি যা চিরন্তন।">
+    <!-- Bengali Details Section Wrapper -->
+    <div class="section-container" id="bengali-details-section">
+      <!-- Bengali Details Control Panel -->
+      <section class="controls-toolbar compact" id="bengali-details-control" style="margin-top: 3.5rem; margin-bottom: 2rem;">
+        <!-- Row 1: Story & Meta Texts -->
+        <div class="toolbar-row">
+          <div class="input-field-group compact">
+            <label for="detail-paragraph-input-bn">Story</label>
+            <input type="text" id="detail-paragraph-input-bn" value="জীবন একটি ট্রেনের মতো; মানুষ বিভিন্ন স্টেশনে আসে এবং চলে যায়, রেখে যায় কিছু স্মৃতি যা চিরন্তন।" style="width: 320px;">
+          </div>
+          <div class="input-field-group compact">
+            <label for="detail-meta-input-bn">Meta</label>
+            <input type="text" id="detail-meta-input-bn" value="রঙ: বালু বেজ • সাইজ: এক্সএল • ১০০% সুতি • আর্কাইভ ২০২৬" style="width: 280px;">
+          </div>
         </div>
-        <div class="input-field-group">
-          <label for="detail-meta-input-bn">Product Label Meta (Bengali)</label>
-          <input type="text" id="detail-meta-input-bn" value="রঙ: বালু বেজ • সাইজ: এক্সএল • ১০০% সুতি • আর্কাইভ ২০২৬">
+        
+        <!-- Row 2: Typography parameters -->
+        <div class="toolbar-row">
+          <!-- Line Spacing for Bengali Details -->
+          <div class="leading-control-group compact">
+            <label>Spacing</label>
+            <div class="leading-input-wrapper">
+              <span class="leading-icon-span" title="Line Spacing">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M3 4v16M1 7l2-3 2 3M1 17l2 3 2-3" />
+                  <path d="M12 5l2.5 6h-5z" />
+                  <path d="M12 13l2.5 6h-5z" />
+                </svg>
+              </span>
+              <input type="number" id="spacing-input-bn-details" value="6" class="leading-num-input">
+              <span class="leading-unit">px</span>
+              <div class="leading-spin-buttons">
+                <button class="spin-btn up">▲</button>
+                <button class="spin-btn down">▼</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="toolbar-divider"></div>
+
+          <!-- Font Size 1 for Bengali Details -->
+          <div class="leading-control-group compact">
+            <label>Size 1</label>
+            <div class="leading-input-wrapper">
+              <span class="leading-icon-span" title="Font Size 1">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+                </svg>
+              </span>
+              <input type="number" id="font-size-1-bn-details" value="12" class="leading-num-input">
+              <span class="leading-unit">px</span>
+              <div class="leading-spin-buttons">
+                <button class="spin-btn up">▲</button>
+                <button class="spin-btn down">▼</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Font Size 2 for Bengali Details -->
+          <div class="leading-control-group compact">
+            <label>Size 2</label>
+            <div class="leading-input-wrapper">
+              <span class="leading-icon-span" title="Font Size 2">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+                </svg>
+              </span>
+              <input type="number" id="font-size-2-bn-details" value="12" class="leading-num-input">
+              <span class="leading-unit">px</span>
+              <div class="leading-spin-buttons">
+                <button class="spin-btn up">▲</button>
+                <button class="spin-btn down">▼</button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     <!-- Details and Filler Section (Bengali) -->
     <section class="detail-specimen-section" id="detail-specimen-bn" style="margin-bottom: 3.5rem;">
@@ -2838,6 +3043,7 @@
 
       </div>
     </section>
+    </div><!-- Close Bengali Details Section -->
 
     <!-- Brand Footer -->
     <footer class="brand-footer">
