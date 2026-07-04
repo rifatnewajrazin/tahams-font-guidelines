@@ -8,7 +8,7 @@
   <!-- Import Google Fonts representing direct matches and premium equivalents -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Caveat:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Grand+Hotel&family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital,wght@0,400;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,300..900;1,300..900&family=Mr+De+Haviland&family=Outfit:wght@300;400;500;600;700&family=Pacifico&family=Pinyon+Script&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&family=Sacramento&family=Six+Caps&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@400;700&family=Anek+Bangla:wght@100..800&family=Atma:wght@300..700&family=Baloo+Da+2:wght@400..800&family=Galada&family=Hind+Siliguri:wght@300;400;500;600;700&family=Mina:wght@400;700&family=Noto+Sans+Bengali:wght@100..900&family=Noto+Serif+Bengali:wght@100..900&family=Tiro+Bangla:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Caveat:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Grand+Hotel&family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital,wght@0,400;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,300..900;1,300..900&family=Mr+De+Haviland&family=Outfit:wght@300;400;500;600;700&family=Pacifico&family=Pinyon+Script&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&family=Sacramento&family=Six+Caps&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
   
@@ -36,10 +36,8 @@
       </div>
       
       <div class="nav-center">
-        <a href="#playground" class="nav-link active">English Specimen</a>
-        <a href="#detail-specimen" class="nav-link">English Filler</a>
-        <a href="#bengali-specimen" class="nav-link">Bengali Specimen</a>
-        <a href="#bengali-details-control" class="nav-link">Bengali Filler</a>
+        <a href="#playground" class="nav-link active">Typography Specimen</a>
+        <a href="#detail-specimen" class="nav-link">Detail & Filler Styles</a>
       </div>
       
       <div class="nav-right">
@@ -68,90 +66,39 @@
       </div>
     </header>
 
-    <!-- English Slogan Section Wrapper -->
-    <div class="section-container" id="english-slogan-section">
-      <!-- Customizer Toolbar (English) -->
-      <section class="controls-toolbar compact" id="english-workspace">
-        <!-- Row 1: Texts + Style -->
-        <div class="toolbar-row">
-          <div class="input-field-group compact">
-            <label for="secondary-input">Supporting</label>
-            <input type="text" id="secondary-input" value="against the" style="width: 180px;">
-          </div>
-          <div class="input-field-group compact">
-            <label for="primary-input">Highlight</label>
-            <input type="text" id="primary-input" value="current" style="width: 160px;">
-          </div>
-          <div class="toggle-field-group compact">
-            <label>Style</label>
-            <div class="toggle-btn-group">
-              <button class="layout-btn active" data-layout="primary-display">Bold</button>
-              <button class="layout-btn" data-layout="primary-cursive">Cursive</button>
-            </div>
+    <!-- Customizer Toolbar -->
+    <section class="controls-toolbar">
+      <div class="toolbar-title">Slogan & Detail Workspace</div>
+      <div class="toolbar-grid">
+        <div class="input-field-group">
+          <label for="secondary-input">1. Supporting Text (Normal / Small)</label>
+          <input type="text" id="secondary-input" value="against the">
+        </div>
+        <div class="input-field-group">
+          <label for="primary-input">2. Highlight Text (Dominant / Large)</label>
+          <input type="text" id="primary-input" value="current">
+        </div>
+        <div class="toggle-field-group">
+          <label>Dominant Text Style</label>
+          <div class="toggle-btn-group">
+            <button class="layout-btn active" data-layout="primary-display">Bold Display</button>
+            <button class="layout-btn" data-layout="primary-cursive">Cursive Accent</button>
           </div>
         </div>
-        
-        <!-- Row 2: Spacing + Sizes -->
-        <div class="toolbar-row">
-          <!-- Line Spacing -->
-          <div class="leading-control-group compact">
-            <label>Spacing</label>
-            <div class="leading-input-wrapper">
-              <span class="leading-icon-span" title="Line Spacing">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <path d="M3 4v16M1 7l2-3 2 3M1 17l2 3 2-3" />
-                  <path d="M12 5l2.5 6h-5z" />
-                  <path d="M12 13l2.5 6h-5z" />
-                </svg>
-              </span>
-              <input type="number" id="spacing-input-en" value="6" class="leading-num-input">
-              <span class="leading-unit">px</span>
-              <div class="leading-spin-buttons">
-                <button class="spin-btn up">▲</button>
-                <button class="spin-btn down">▼</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="toolbar-divider"></div>
-
-          <!-- Font Size 1 -->
-          <div class="leading-control-group compact">
-            <label>Size 1</label>
-            <div class="leading-input-wrapper">
-              <span class="leading-icon-span" title="Font Size 1">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <path d="M4 7V4h16v3M9 20h6M12 4v16" />
-                </svg>
-              </span>
-              <input type="number" id="font-size-1-en" value="51" class="leading-num-input">
-              <span class="leading-unit">px</span>
-              <div class="leading-spin-buttons">
-                <button class="spin-btn up">▲</button>
-                <button class="spin-btn down">▼</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Font Size 2 -->
-          <div class="leading-control-group compact">
-            <label>Size 2</label>
-            <div class="leading-input-wrapper">
-              <span class="leading-icon-span" title="Font Size 2">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <path d="M4 7V4h16v3M9 20h6M12 4v16" />
-                </svg>
-              </span>
-              <input type="number" id="font-size-2-en" value="29" class="leading-num-input">
-              <span class="leading-unit">px</span>
-              <div class="leading-spin-buttons">
-                <button class="spin-btn up">▲</button>
-                <button class="spin-btn down">▼</button>
-              </div>
-            </div>
-          </div>
+      </div>
+      
+      <!-- Secondary controls for filler/detail text -->
+      <div class="toolbar-details-row">
+        <div class="input-field-group">
+          <label for="detail-paragraph-input">3. Detail Story Text (Narrative Body / 11px)</label>
+          <input type="text" id="detail-paragraph-input" value="Life is like a train journey; people come and go at different stations, leaving behind memories and lessons that remain eternal.">
         </div>
-      </section>
+        <div class="input-field-group">
+          <label for="detail-meta-input">4. Product Label Meta (Wash Tags / Details)</label>
+          <input type="text" id="detail-meta-input" value="COLWAY: SAND BEIGE • SIZE: XL • 100% COMBED COTTON • ARCHIVE 2K25">
+        </div>
+      </div>
+    </section>
     
     <!-- Pairing Grid -->
     <main class="pairing-grid">
@@ -1048,6 +995,7 @@
           <div class="category-badge">Elegant Serif + Swash Script</div>
         </div>
         <div class="card-body font-healing_time-target">
+          <div class="time-oval-badge">2026</div>
           <div class="line-secondary">against the</div>
           <div class="line-primary">current</div>
         </div>
@@ -1162,6 +1110,8 @@
           <div class="category-badge">Wide Sans + Plain</div>
         </div>
         <div class="card-body font-sunday_vibes-target">
+          <!-- Sun decoration shape -->
+          <svg class="sun-icon-decor" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom: 0.5rem; color: var(--text-tertiary);"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M5.64 18.36l-1.42 1.42M19.78 4.22l-1.42 1.42"/></svg>
           <div class="line-secondary">against the</div>
           <div class="line-primary">current</div>
         </div>
@@ -1219,6 +1169,7 @@
           <div class="category-badge">Varsity Curved + Sans</div>
         </div>
         <div class="card-body font-take_time-target">
+          <div class="camera-tech-tag">HB2 // VSCO</div>
           <div class="line-secondary">against the</div>
           <div class="line-primary">current</div>
         </div>
@@ -1334,7 +1285,11 @@
         </div>
         <div class="card-body font-stronger_with-target">
           <div class="line-secondary">against the</div>
-          <div class="line-primary">current</div>
+          <div class="stronger-footer-group">
+            <div class="capsule-arrow-box">➔</div>
+            <div class="line-primary">current</div>
+            <span class="trademark-stamps">™ © ®</span>
+          </div>
         </div>
         <div class="card-color-bar">
           <div class="color-indicators">
@@ -1504,8 +1459,16 @@
           <div class="category-badge">Serif Italic + Bold Serif Caps</div>
         </div>
         <div class="card-body font-beautiful_sunset-target">
-          <div class="line-secondary">against the</div>
-          <div class="line-primary">current</div>
+          <div class="sunset-top-line">
+            <div class="line-secondary">against the</div>
+            <div class="sunset-oval-of">OF</div>
+          </div>
+          <div class="sunset-bottom-line">
+            <span class="sunset-arrow">➔</span>
+            <div class="line-primary">current</div>
+            <span class="sunset-copyright">©</span>
+            <span class="sunset-location-stamp">Lok Bahu, Samarinda.</span>
+          </div>
         </div>
         <div class="card-color-bar">
           <div class="color-indicators">
@@ -1618,7 +1581,10 @@
           <div class="category-badge">Serif Roman + Serif Italic</div>
         </div>
         <div class="card-body font-romance_untold-target">
+          <div class="romance-tech-left">09</div>
+          <div class="romance-tech-right">2026</div>
           <div class="line-secondary">against the</div>
+          <div class="romance-flat-oval">AT SEMESTA'S GALLERY</div>
           <div class="line-primary">current</div>
         </div>
         <div class="card-color-bar">
@@ -1676,7 +1642,7 @@
         </div>
         <div class="card-body font-remember_this-target">
           <div class="line-secondary">against the</div>
-          <div class="line-primary">current</div>
+          <div class="remember-oval-badge">remember</div>
         </div>
         <div class="card-color-bar">
           <div class="color-indicators">
@@ -1789,8 +1755,14 @@
           <div class="category-badge">Serif + Cursive Stack</div>
         </div>
         <div class="card-body font-sea_energy-target">
-          <div class="line-secondary">against the</div>
-          <div class="line-primary">current</div>
+          <div class="sea-top-stamp">At Pancer Beach, Jember</div>
+          <div class="sea-vertical-stack">
+            <div class="sea-row-1">Sea</div>
+            <div class="sea-row-2">needs</div>
+            <div class="sea-row-3">more</div>
+            <div class="line-primary sea-row-4">energy.</div>
+          </div>
+          <div class="sea-bottom-stamp">Captured by Cahyanimldd</div>
         </div>
         <div class="card-color-bar">
           <div class="color-indicators">
@@ -1960,8 +1932,9 @@
           <div class="category-badge">Three-Tier Hybrid Stack</div>
         </div>
         <div class="card-body font-finding_stillness-target">
-          <div class="line-secondary">against the</div>
-          <div class="line-primary">current</div>
+          <div class="stillness-line-1">finding</div>
+          <div class="line-primary stillness-line-2">current</div>
+          <div class="stillness-line-3">at the top.</div>
         </div>
         <div class="card-color-bar">
           <div class="color-indicators">
@@ -2004,90 +1977,12 @@
           <p>Inspired by <em>finding Stillness at the top.</em>. Three-tier campaign slogan mix with light serif italics, bold rounded sans, and regular serifs.</p>
         </div>
       </section>
-    </div><!-- Close English Slogan Section -->
+    </main>
 
-    <!-- English Details Section Wrapper -->
-    <div class="section-container" id="english-details-section">
-      <!-- English Details Control Panel -->
-      <section class="controls-toolbar compact" id="detail-specimen">
-        <!-- Row 1: Story & Meta Texts -->
-        <div class="toolbar-row">
-          <div class="input-field-group compact">
-            <label for="detail-paragraph-input">Story</label>
-            <input type="text" id="detail-paragraph-input" value="Life is like a train journey; people come and go at different stations, leaving behind memories and lessons that remain eternal." style="width: 320px;">
-          </div>
-          <div class="input-field-group compact">
-            <label for="detail-meta-input">Meta</label>
-            <input type="text" id="detail-meta-input" value="COLWAY: SAND BEIGE • SIZE: XL • 100% COMBED COTTON • ARCHIVE 2K25" style="width: 280px;">
-          </div>
-        </div>
-        
-        <!-- Row 2: Typography parameters -->
-        <div class="toolbar-row">
-          <!-- Line Spacing for English Details -->
-          <div class="leading-control-group compact">
-            <label>Spacing</label>
-            <div class="leading-input-wrapper">
-              <span class="leading-icon-span" title="Line Spacing">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <path d="M3 4v16M1 7l2-3 2 3M1 17l2 3 2-3" />
-                  <path d="M12 5l2.5 6h-5z" />
-                  <path d="M12 13l2.5 6h-5z" />
-                </svg>
-              </span>
-              <input type="number" id="spacing-input-en-details" value="6" class="leading-num-input">
-              <span class="leading-unit">px</span>
-              <div class="leading-spin-buttons">
-                <button class="spin-btn up">▲</button>
-                <button class="spin-btn down">▼</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="toolbar-divider"></div>
-
-          <!-- Font Size 1 for English Details -->
-          <div class="leading-control-group compact">
-            <label>Size 1</label>
-            <div class="leading-input-wrapper">
-              <span class="leading-icon-span" title="Font Size 1">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <path d="M4 7V4h16v3M9 20h6M12 4v16" />
-                </svg>
-              </span>
-              <input type="number" id="font-size-1-en-details" value="12" class="leading-num-input">
-              <span class="leading-unit">px</span>
-              <div class="leading-spin-buttons">
-                <button class="spin-btn up">▲</button>
-                <button class="spin-btn down">▼</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Font Size 2 for English Details -->
-          <div class="leading-control-group compact">
-            <label>Size 2</label>
-            <div class="leading-input-wrapper">
-              <span class="leading-icon-span" title="Font Size 2">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <path d="M4 7V4h16v3M9 20h6M12 4v16" />
-                </svg>
-              </span>
-              <input type="number" id="font-size-2-en-details" value="12" class="leading-num-input">
-              <span class="leading-unit">px</span>
-              <div class="leading-spin-buttons">
-                <button class="spin-btn up">▲</button>
-                <button class="spin-btn down">▼</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    <!-- Details and Filler Section (English) -->
-    <section class="detail-specimen-section" id="detail-specimen-en" style="margin-bottom: 3.5rem;">
+    <!-- NEW SECTION: Filler & Detail Text Graphics Specimen -->
+    <section class="detail-specimen-section" id="detail-specimen">
       <div class="detail-section-header">
-        <h2>Brand Metadata & Filler Text Styles (English)</h2>
+        <h2>Brand Metadata & Filler Text Styles</h2>
         <p>Predefined layouts for wash guidelines, color tags, sidebar stamps, and storytelling prints.</p>
       </div>
 
@@ -2107,47 +2002,10 @@
             <!-- Rotated vertical detail sidebars -->
             <div class="showcase-a-right">
               <div class="vertical-stamp-block stamp-creative">
-                <span class="line-primary">CREATIVE STORIES</span>
+                <span>CREATIVE STORIES</span>
               </div>
               <div class="vertical-stamp-block stamp-day">
-                <span class="line-secondary">MONDAY / FEBRUARI</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
+                <span>MONDAY / FEBRUARI</span>
               </div>
             </div>
           </div>
@@ -2160,57 +2018,18 @@
         <article class="detail-style-card card-layout-b">
           <div class="style-card-title">Detail 2: Narrative Story / Description Block</div>
           
-          <div class="layout-showcase-b" style="flex-direction: column; gap: 1rem; align-items: flex-start; min-height: auto;">
-            <div style="display: flex; gap: 1.5rem; align-items: stretch; width: 100%;">
-              <div class="vertical-column-stamp" style="writing-mode: vertical-rl; font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.1em; color: var(--text-secondary); border-left: 1px dashed var(--border-primary); padding-left: 0.5rem; text-orientation: mixed; text-transform: uppercase;">
-                <span class="line-primary">STORYLINE</span>
-              </div>
-              
-              <!-- Standard story paragraph block, narrow width, high line-height -->
-              <div class="story-paragraph-block line-secondary" id="preview-detail-story" style="width: 100%;">
-                Life is like a train journey; people come and go at different stations, leaving behind memories and lessons that remain eternal.
-              </div>
+          <div class="layout-showcase-b">
+            <!-- Multi-lingual vertical option next to the english text -->
+            <div class="japanese-column">人は出会い、別れていく</div>
+            
+            <!-- Standard story paragraph block, narrow width, high line-height -->
+            <div class="story-paragraph-block" id="preview-detail-story">
+              Life is like a train journey; people come and go at different stations, leaving behind memories and lessons that remain eternal.
             </div>
           </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
+          
           <div class="style-card-footer">
-            <strong>Ideal Fonts:</strong> <code>Plus Jakarta Sans</code> or <code>Outfit</code> (Lowercase, regular weight, size: 12px, line-height: 1.7). Recreates the narrative details.
+            <strong>Ideal Fonts:</strong> <code>Plus Jakarta Sans</code> or <code>Outfit</code> (Lowercase, regular weight, size: 12px, line-height: 1.7). Recreates the narrative sidebar details.
           </div>
         </article>
 
@@ -2218,53 +2037,17 @@
         <article class="detail-style-card card-layout-c">
           <div class="style-card-title">Detail 3: Wash Tag & Product Specification Layout</div>
           
-          <div class="layout-showcase-c" style="min-height: auto; gap: 0.8rem;">
-            <div class="specification-grid line-secondary" id="preview-detail-meta">
+          <div class="layout-showcase-c">
+            <div class="specification-grid" id="preview-detail-meta">
               COLWAY: SAND BEIGE • SIZE: XL • 100% COMBED COTTON • ARCHIVE 2K25
             </div>
             <div class="specification-bar-lines">
-              <span class="bar-line line-primary" style="background-color: var(--text-primary);"></span>
-              <span class="bar-line dot line-primary" style="background-color: var(--text-primary);"></span>
-              <span class="bar-line line-primary" style="background-color: var(--text-primary);"></span>
+              <span class="bar-line"></span>
+              <span class="bar-line dot"></span>
+              <span class="bar-line"></span>
             </div>
           </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
+          
           <div class="style-card-footer">
             <strong>Ideal Fonts:</strong> <code>Space Grotesk</code> or <code>Outfit Light</code> (Uppercase, tracked 1.5px, size: 10px). Recreates e-commerce tag listings and garment specifications.
           </div>
@@ -2277,774 +2060,25 @@
           <div class="layout-showcase-d">
             <!-- Left side: Solid color tag + camera specifications -->
             <div class="showcase-d-left">
-              <div class="tech-tag-red line-primary" style="background-color: #ff3b30; color: #fff;">12.8</div>
-              <div class="tech-tag-camera line-secondary">camera : Samsung A10s</div>
+              <div class="tech-tag-red">12.8</div>
+              <div class="tech-tag-camera">camera : Samsung A10s</div>
             </div>
             
             <!-- Right side: Arrow buttons and serial specifications -->
             <div class="showcase-d-right">
-              <div class="tech-arrow-stamp line-primary" style="color: #ff3b30;">➔</div>
-              <div class="tech-tag-code line-secondary">46U5T • 2K25</div>
+              <div class="tech-arrow-stamp">➔</div>
+              <div class="tech-tag-code">46U5T • 2K25</div>
             </div>
           </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
+          
           <div class="style-card-footer">
-            <strong>Ideal Fonts:</strong> <code>Space Grotesk</code> or <code>Inter Light</code>. Recreates the camera/spec grids with symbol overlays.
+            <strong>Ideal Fonts:</strong> <code>Inter Light</code> or <code>Outfit</code> (Lowercase, regular weight, size: 10px-11px). Recreates the camera/spec grids with symbol overlays.
           </div>
         </article>
 
       </div>
     </section>
-    </div><!-- Close English Details Section -->
-
-    <!-- Dedicated Bengali Specimen Section -->
-    <section class="bengali-specimen-section" id="bengali-specimen">
-      <div class="detail-section-header">
-        <h2>Bengali Typography Specimen</h2>
-        <p>Curated Bangla typefaces and campaign pairings tailored for Tahams collections.</p>
-      </div>
-
-      <!-- Bengali Slogan Section Wrapper -->
-      <div class="section-container" id="bengali-slogan-section">
-        <!-- Customizer Toolbar (Bengali) -->
-        <section class="controls-toolbar compact" id="bengali-workspace" style="margin-bottom: 3.5rem;">
-          <!-- Row 1: Texts + Style -->
-          <div class="toolbar-row">
-            <div class="input-field-group compact">
-              <label for="secondary-input-bn">Supporting</label>
-              <input type="text" id="secondary-input-bn" value="স্রোতের" style="width: 180px;">
-            </div>
-            <div class="input-field-group compact">
-              <label for="primary-input-bn">Highlight</label>
-              <input type="text" id="primary-input-bn" value="বিপরীতে" style="width: 160px;">
-            </div>
-            <div class="toggle-field-group compact">
-              <label>Style</label>
-              <div class="toggle-btn-group">
-                <button class="layout-btn-bn active" data-layout="primary-display">Bold</button>
-                <button class="layout-btn-bn" data-layout="primary-cursive">Cursive</button>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Row 2: Spacing + Sizes -->
-          <div class="toolbar-row">
-            <!-- Line Spacing for Bengali -->
-            <div class="leading-control-group compact">
-              <label>Spacing</label>
-              <div class="leading-input-wrapper">
-                <span class="leading-icon-span" title="Line Spacing">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                    <path d="M3 4v16M1 7l2-3 2 3M1 17l2 3 2-3" />
-                    <path d="M12 5l2.5 6h-5z" />
-                    <path d="M12 13l2.5 6h-5z" />
-                  </svg>
-                </span>
-                <input type="number" id="spacing-input-bn" value="6" class="leading-num-input">
-                <span class="leading-unit">px</span>
-                <div class="leading-spin-buttons">
-                  <button class="spin-btn up">▲</button>
-                  <button class="spin-btn down">▼</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="toolbar-divider"></div>
-
-            <!-- Font Size 1 for Bengali -->
-            <div class="leading-control-group compact">
-              <label>Size 1</label>
-              <div class="leading-input-wrapper">
-                <span class="leading-icon-span" title="Font Size 1">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                    <path d="M4 7V4h16v3M9 20h6M12 4v16" />
-                  </svg>
-                </span>
-                <input type="number" id="font-size-1-bn" value="51" class="leading-num-input">
-                <span class="leading-unit">px</span>
-                <div class="leading-spin-buttons">
-                  <button class="spin-btn up">▲</button>
-                  <button class="spin-btn down">▼</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Font Size 2 for Bengali -->
-            <div class="leading-control-group compact">
-              <label>Size 2</label>
-              <div class="leading-input-wrapper">
-                <span class="leading-icon-span" title="Font Size 2">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                    <path d="M4 7V4h16v3M9 20h6M12 4v16" />
-                  </svg>
-                </span>
-                <input type="number" id="font-size-2-bn" value="29" class="leading-num-input">
-                <span class="leading-unit">px</span>
-                <div class="leading-spin-buttons">
-                  <button class="spin-btn up">▲</button>
-                  <button class="spin-btn down">▼</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      <div class="pairing-grid">
-        <!-- 33. Bold Modern Sans Pairing -->
-        <section class="pairing-card" data-pairing="modern_bangla">
-          <div class="card-header">
-            <div class="header-left">
-              <span class="pairing-number-badge">33</span>
-              <div class="font-indicator">
-                <span class="font-tag">Font 1: <strong>Anek Bangla</strong></span>
-                <span class="font-tag">Font 2: <strong>Hind Siliguri</strong></span>
-              </div>
-            </div>
-            <div class="category-badge">Modern Campaign</div>
-          </div>
-          <div class="card-body font-modern_bangla-target">
-            <div class="line-secondary">স্রোতের</div>
-            <div class="line-primary">বিপরীতে</div>
-          </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <p>Inspired by <em>Anek Bangla + Hind Siliguri</em>. Bold geometric sans display balanced with high legibility UI sans.</p>
-          </div>
-        </section>
-
-        <!-- 34. Literary Editorial Serif Pairing -->
-        <section class="pairing-card" data-pairing="literary_bangla">
-          <div class="card-header">
-            <div class="header-left">
-              <span class="pairing-number-badge">34</span>
-              <div class="font-indicator">
-                <span class="font-tag">Font 1: <strong>Tiro Bangla</strong></span>
-                <span class="font-tag">Font 2: <strong>Noto Serif Bengali</strong></span>
-              </div>
-            </div>
-            <div class="category-badge">Classic Heritage</div>
-          </div>
-          <div class="card-body font-literary_bangla-target">
-            <div class="line-secondary">নীরবতার</div>
-            <div class="line-primary">গল্প</div>
-          </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <p>Inspired by <em>Tiro Bangla + Noto Serif Bengali</em>. Classical modulated literary script pairing for high-end heritage campaigns.</p>
-          </div>
-        </section>
-
-        <!-- 35. Calligraphy Script & Clean Sans Pairing -->
-        <section class="pairing-card" data-pairing="signature_bangla">
-          <div class="card-header">
-            <div class="header-left">
-              <span class="pairing-number-badge">35</span>
-              <div class="font-indicator">
-                <span class="font-tag">Font 1: <strong>Galada</strong></span>
-                <span class="font-tag">Font 2: <strong>Noto Sans Bengali</strong></span>
-              </div>
-            </div>
-            <div class="category-badge">Signature Accent</div>
-          </div>
-          <div class="card-body font-signature_bangla-target">
-            <div class="line-secondary">তাহামস</div>
-            <div class="line-primary">ব্র্যান্ড</div>
-          </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <p>Inspired by <em>Galada + Noto Sans Bengali</em>. Fluid connected calligraphic script overlaying clean block structures.</p>
-          </div>
-        </section>
-
-        <!-- 36. Playful Rounded & Casual Sans Pairing -->
-        <section class="pairing-card" data-pairing="playful_bangla">
-          <div class="card-header">
-            <div class="header-left">
-              <span class="pairing-number-badge">36</span>
-              <div class="font-indicator">
-                <span class="font-tag">Font 1: <strong>Baloo Da 2</strong></span>
-                <span class="font-tag">Font 2: <strong>Mina</strong></span>
-              </div>
-            </div>
-            <div class="category-badge">Streetwear Playful</div>
-          </div>
-          <div class="card-body font-playful_bangla-target">
-            <div class="line-secondary">হাসি ও</div>
-            <div class="line-primary">কোলাহল</div>
-          </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <p>Inspired by <em>Baloo Da 2 + Mina</em>. Thick, warm, friendly rounded layout matching streetwear and casual lines.</p>
-          </div>
-        </section>
-
-        <!-- 37. Handwritten & Minimal Sans Pairing -->
-        <section class="pairing-card" data-pairing="handwritten_bangla">
-          <div class="card-header">
-            <div class="header-left">
-              <span class="pairing-number-badge">37</span>
-              <div class="font-indicator">
-                <span class="font-tag">Font 1: <strong>Atma</strong></span>
-                <span class="font-tag">Font 2: <strong>Hind Siliguri</strong></span>
-              </div>
-            </div>
-            <div class="category-badge">Organic Crafted</div>
-          </div>
-          <div class="card-body font-handwritten_bangla-target">
-            <div class="line-secondary">নিজের মতো</div>
-            <div class="line-primary">করে</div>
-          </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <p>Inspired by <em>Atma + Hind Siliguri</em>. Raw, hand-drawn organic headline combined with clean base text structure.</p>
-          </div>
-        </section>
-      </div><!-- Close Bengali Slogan Section -->
-    </section>
-
-    <!-- Bengali Details Section Wrapper -->
-    <div class="section-container" id="bengali-details-section">
-      <!-- Bengali Details Control Panel -->
-      <section class="controls-toolbar compact" id="bengali-details-control" style="margin-top: 3.5rem; margin-bottom: 2rem;">
-        <!-- Row 1: Story & Meta Texts -->
-        <div class="toolbar-row">
-          <div class="input-field-group compact">
-            <label for="detail-paragraph-input-bn">Story</label>
-            <input type="text" id="detail-paragraph-input-bn" value="জীবন একটি ট্রেনের মতো; মানুষ বিভিন্ন স্টেশনে আসে এবং চলে যায়, রেখে যায় কিছু স্মৃতি যা চিরন্তন।" style="width: 320px;">
-          </div>
-          <div class="input-field-group compact">
-            <label for="detail-meta-input-bn">Meta</label>
-            <input type="text" id="detail-meta-input-bn" value="রঙ: বালু বেজ • সাইজ: এক্সএল • ১০০% সুতি • আর্কাইভ ২০২৬" style="width: 280px;">
-          </div>
-        </div>
-        
-        <!-- Row 2: Typography parameters -->
-        <div class="toolbar-row">
-          <!-- Line Spacing for Bengali Details -->
-          <div class="leading-control-group compact">
-            <label>Spacing</label>
-            <div class="leading-input-wrapper">
-              <span class="leading-icon-span" title="Line Spacing">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <path d="M3 4v16M1 7l2-3 2 3M1 17l2 3 2-3" />
-                  <path d="M12 5l2.5 6h-5z" />
-                  <path d="M12 13l2.5 6h-5z" />
-                </svg>
-              </span>
-              <input type="number" id="spacing-input-bn-details" value="6" class="leading-num-input">
-              <span class="leading-unit">px</span>
-              <div class="leading-spin-buttons">
-                <button class="spin-btn up">▲</button>
-                <button class="spin-btn down">▼</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="toolbar-divider"></div>
-
-          <!-- Font Size 1 for Bengali Details -->
-          <div class="leading-control-group compact">
-            <label>Size 1</label>
-            <div class="leading-input-wrapper">
-              <span class="leading-icon-span" title="Font Size 1">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <path d="M4 7V4h16v3M9 20h6M12 4v16" />
-                </svg>
-              </span>
-              <input type="number" id="font-size-1-bn-details" value="12" class="leading-num-input">
-              <span class="leading-unit">px</span>
-              <div class="leading-spin-buttons">
-                <button class="spin-btn up">▲</button>
-                <button class="spin-btn down">▼</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Font Size 2 for Bengali Details -->
-          <div class="leading-control-group compact">
-            <label>Size 2</label>
-            <div class="leading-input-wrapper">
-              <span class="leading-icon-span" title="Font Size 2">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <path d="M4 7V4h16v3M9 20h6M12 4v16" />
-                </svg>
-              </span>
-              <input type="number" id="font-size-2-bn-details" value="12" class="leading-num-input">
-              <span class="leading-unit">px</span>
-              <div class="leading-spin-buttons">
-                <button class="spin-btn up">▲</button>
-                <button class="spin-btn down">▼</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    <!-- Details and Filler Section (Bengali) -->
-    <section class="detail-specimen-section" id="detail-specimen-bn" style="margin-bottom: 3.5rem;">
-      <div class="detail-section-header">
-        <h2>Brand Metadata & Filler Text Styles (Bengali)</h2>
-        <p>Predefined layouts for wash guidelines, color tags, sidebar stamps, and storytelling prints in Bengali.</p>
-      </div>
-
-      <div class="detail-grid">
-        
-        <!-- Style 1: Vertical Sidebar Stamp & Date Block (Bengali) -->
-        <article class="detail-style-card card-layout-a">
-          <div class="style-card-title">Detail 1: Vertical Stamps & Date Stamp Layout</div>
-          
-          <div class="layout-showcase-a">
-            <!-- Large date display in bold numbers -->
-            <div class="showcase-a-left">
-              <div class="date-stamp-large">২৪ <span class="date-sep">/</span> ০২</div>
-              <div class="date-stamp-label">প্রকাশের তারিখ</div>
-            </div>
-            
-            <!-- Rotated vertical detail sidebars -->
-            <div class="showcase-a-right">
-              <div class="vertical-stamp-block stamp-creative">
-                <span class="line-primary">সৃজনশীল গল্প</span>
-              </div>
-              <div class="vertical-stamp-block stamp-day">
-                <span class="line-secondary">সোমবার / ফেব্রুয়ারি</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="style-card-footer">
-            <strong>Ideal Fonts:</strong> <code>Hind Siliguri</code> or <code>Noto Sans Bengali</code>. Recreates the vertical calendar sidebar blocks.
-          </div>
-        </article>
-
-        <!-- Style 2: Narrative Column Block (Bengali) -->
-        <article class="detail-style-card card-layout-b">
-          <div class="style-card-title">Detail 2: Narrative Story / Description Block</div>
-          
-          <div class="layout-showcase-b" style="flex-direction: column; gap: 1rem; align-items: flex-start; min-height: auto;">
-            <div style="display: flex; gap: 1.5rem; align-items: stretch; width: 100%;">
-              <div class="vertical-column-stamp" style="writing-mode: vertical-rl; font-family: 'Tiro Bangla', serif; font-size: 0.8rem; letter-spacing: 0.1em; color: var(--text-secondary); border-left: 1px dashed var(--border-primary); padding-left: 0.5rem; text-orientation: mixed;">
-                <span class="line-primary">গল্পসূত্র</span>
-              </div>
-              
-              <!-- Standard story paragraph block, narrow width, high line-height -->
-              <div class="story-paragraph-block line-secondary" id="preview-detail-story-bn" style="font-family: 'Noto Serif Bengali', serif; font-size: 0.78rem; line-height: 1.6; color: var(--text-secondary); width: 100%;">
-                জীবন একটি ট্রেনের মতো; মানুষ বিভিন্ন স্টেশনে আসে এবং চলে যায়, রেখে যায় কিছু স্মৃতি যা চিরন্তন।
-              </div>
-            </div>
-          </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="style-card-footer">
-            <strong>Ideal Fonts:</strong> <code>Noto Serif Bengali</code> (BN) (Lowercase, regular weight, size: 12px, line-height: 1.7). Recreates the narrative details.
-          </div>
-        </article>
-
-        <!-- Style 3: Wash Tag & Color Code Metadata (Bengali) -->
-        <article class="detail-style-card card-layout-c">
-          <div class="style-card-title">Detail 3: Wash Tag & Product Specification Layout</div>
-          
-          <div class="layout-showcase-c" style="min-height: auto; gap: 0.8rem;">
-            <div class="specification-grid line-secondary" id="preview-detail-meta-bn" style="font-family: 'Hind Siliguri', sans-serif; font-size: 0.68rem; letter-spacing: 0.5px; width: 100%;">
-              রঙ: বালু বেজ • সাইজ: এক্সএল • ১০০% সুতি • আর্কাইভ ২০২৬
-            </div>
-            <div class="specification-bar-lines">
-              <span class="bar-line line-primary" style="background-color: var(--text-primary);"></span>
-              <span class="bar-line dot line-primary" style="background-color: var(--text-primary);"></span>
-              <span class="bar-line line-primary" style="background-color: var(--text-primary);"></span>
-            </div>
-          </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="style-card-footer">
-            <strong>Ideal Fonts:</strong> <code>Hind Siliguri</code> (BN) (Uppercase, tracked 1.5px, size: 10px). Recreates e-commerce tag listings and garment specifications.
-          </div>
-        </article>
-
-        <!-- Style 4: Technical Specs & Arrow stamp layout (Bengali) -->
-        <article class="detail-style-card card-layout-d">
-          <div class="style-card-title">Detail 4: Technical Specs & Grid Layout</div>
-          
-          <div class="layout-showcase-d">
-            <!-- Left side: Solid color tag + camera specifications -->
-            <div class="showcase-d-left">
-              <div class="tech-tag-red line-primary" style="background-color: #ff3b30; color: #fff;">১২.৮</div>
-              <div class="tech-tag-camera line-secondary" style="font-family: 'Hind Siliguri', sans-serif;">ক্যামেরা : স্যামসাং এ১০এস</div>
-            </div>
-            
-            <!-- Right side: Arrow buttons and serial specifications -->
-            <div class="showcase-d-right">
-              <div class="tech-arrow-stamp line-primary" style="color: #ff3b30;">➔</div>
-              <div class="tech-tag-code line-secondary" style="font-family: 'Hind Siliguri', sans-serif;">৪৬ইউ৫টি • ২০২৬</div>
-            </div>
-          </div>
-          <div class="card-color-bar">
-            <div class="color-indicators">
-              <span class="color-indicator-label">slog:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview secondary-color-preview" style="background-color: #ffffff;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-              
-              <button class="swap-colors-btn" title="Swap Colors">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 4v16M7 20l-4-4M7 20l-4-4M17 20V4M17 4l-4 4M17 4l4 4"/></svg>
-              </button>
-              
-              <span class="color-indicator-label">hl:</span>
-              <div class="color-picker-wrapper">
-                <span class="color-preview primary-color-preview" style="background-color: #ff3b30;"></span>
-                <div class="color-dropdown">
-                  <span class="color-opt" data-color="#ffffff" style="background-color: #ffffff;" title="White"></span>
-                  <span class="color-opt" data-color="#ff3b30" style="background-color: #ff3b30;" title="Red"></span>
-                  <span class="color-opt" data-color="#f1e3d3" style="background-color: #f1e3d3;" title="Cream"></span>
-                  <span class="color-opt" data-color="#ffb703" style="background-color: #ffb703;" title="Gold"></span>
-                  <span class="color-opt" data-color="#38b6ff" style="background-color: #38b6ff;" title="Blue"></span>
-                  <span class="color-opt" data-color="#2f855a" style="background-color: #2f855a;" title="Green"></span>
-                  <span class="color-opt" data-color="#718096" style="background-color: #718096;" title="Grey"></span>
-                  <span class="color-opt" data-color="#742a2a" style="background-color: #742a2a;" title="Maroon"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="style-card-footer">
-            <strong>Ideal Fonts:</strong> <code>Hind Siliguri</code> or <code>Noto Sans Bengali</code>. Recreates the camera/spec grids with symbol overlays.
-          </div>
-        </article>
-
-      </div>
-    </section>
-    </div><!-- Close Bengali Details Section -->
-
+    
     <!-- Brand Footer -->
     <footer class="brand-footer">
       <p class="footer-copy">© 2026 <a href="https://tahamsbd.com/" target="_blank" class="footer-brand-link">TAHAMS</a> • Designed by <a href="https://rifatnewajrazin.github.io/" target="_blank" class="footer-designer-link">Rifat Newaj Razin</a> • All rights reserved.</p>

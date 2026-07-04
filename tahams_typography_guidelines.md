@@ -198,36 +198,6 @@ This document serves as the official typography design guidelines for **Tahams**
 * **Vibe**: Inspired by *finding Stillness at the top.*. Three-tier campaign slogan mix with light serif italics, bold rounded sans, and regular serifs.
 * **Usage**: Three-line structured paragraph graphic lockups.
 
-### 33. Bold Modern Sans Pairing (Modern Campaign)
-* **Font 1 (Base/Display)**: `Anek Bangla` (Bold/Extra Bold)
-* **Font 2 (Accent/Cursive)**: `Hind Siliguri` (Medium)
-* **Vibe**: Sharp, high-contrast, modern geometric sans-serif block layouts.
-* **Usage**: Bold streetwear front slogans and modern campaign prints.
-
-### 34. Literary Editorial Serif Pairing (Classic Heritage)
-* **Font 1 (Base/Display)**: `Tiro Bangla` (Italic/Regular)
-* **Font 2 (Accent/Cursive)**: `Noto Serif Bengali` (Medium)
-* **Vibe**: Elegant, traditional, editorial, literary.
-* **Usage**: Poetry-inspired lookbooks, luxury hangtags, and packaging storytelling.
-
-### 35. Calligraphy Script & Clean Sans Pairing (Signature Accent)
-* **Font 1 (Base/Display)**: `Galada` (Cursive Script)
-* **Font 2 (Accent/Cursive)**: `Noto Sans Bengali` (Light/Regular)
-* **Vibe**: Flowing signature cursive shapes layered over clean, structured blocks.
-* **Usage**: Special clothing label tags and script graphic tee layouts.
-
-### 36. Playful Rounded & Casual Sans Pairing (Streetwear Playful)
-* **Font 1 (Base/Display)**: `Baloo Da 2` (Extra Bold)
-* **Font 2 (Accent/Cursive)**: `Mina` (Regular)
-* **Vibe**: Thick, warm, friendly rounded layout.
-* **Usage**: Playful summer graphics, cap embroidery, and casual statements.
-
-### 37. Handwritten & Minimal Sans Pairing (Organic Crafted)
-* **Font 1 (Base/Display)**: `Atma` (Felt-tip Handwritten)
-* **Font 2 (Accent/Cursive)**: `Hind Siliguri` (Regular)
-* **Vibe**: Organic hand-sketched felt-tip pen feel.
-* **Usage**: Thank-you message cards, shipping label decorations, and eco-packaging details.
-
 ---
 
 ## 🏷️ Brand Metadata & Detail Layout Styles
@@ -289,7 +259,7 @@ When creating graphic t-shirts or campaign assets, designers should lock up text
 Include this single link tag in your web projects to import all font directions:
 
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Caveat:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Grand+Hotel&family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital,wght@0,400;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,300..900;1,300..900&family=Mr+De+Haviland&family=Outfit:wght@300;400;500;600;700&family=Pacifico&family=Pinyon+Script&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&family=Sacramento&family=Six+Caps&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@400;700&family=Anek+Bangla:wght@100..800&family=Atma:wght@300..700&family=Baloo+Da+2:wght@400..800&family=Galada&family=Hind+Siliguri:wght@300;400;500;600;700&family=Mina:wght@400;700&family=Noto+Sans+Bengali:wght@100..900&family=Noto+Serif+Bengali:wght@100..900&family=Tiro+Bangla:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Caveat:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Grand+Hotel&family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital,wght@0,400;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,300..900;1,300..900&family=Mr+De+Haviland&family=Outfit:wght@300;400;500;600;700&family=Pacifico&family=Pinyon+Script&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&family=Sacramento&family=Six+Caps&family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
 ```
 
 ---
