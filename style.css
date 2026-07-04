@@ -47,6 +47,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -277,7 +278,7 @@ body {
 
 /* --- Controls Toolbar --- */
 .controls-toolbar {
-  background-color: var(--bg-secondary);
+  background-color: rgba(20, 20, 20, 0.75);
   border: 1px solid var(--border-primary);
   border-radius: 24px;
   padding: 2.2rem;
@@ -285,6 +286,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  
+  position: sticky;
+  top: 90px;
+  z-index: 90;
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .controls-toolbar {
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .toolbar-title {
@@ -306,7 +317,7 @@ body {
 
 @media (min-width: 992px) {
   .toolbar-grid {
-    grid-template-columns: 1fr 1fr auto;
+    grid-template-columns: 1.2fr 1.2fr auto auto;
   }
 }
 
@@ -344,6 +355,7 @@ body {
 .toggle-field-group {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.6rem;
 }
 
@@ -353,6 +365,7 @@ body {
   letter-spacing: 1px;
   font-weight: 700;
   color: var(--text-secondary);
+  text-align: center;
 }
 
 .toggle-btn-group {
@@ -364,7 +377,7 @@ body {
   gap: 0.2rem;
 }
 
-.layout-btn {
+.layout-btn, .layout-btn-bn, .lang-btn {
   background: transparent;
   border: none;
   color: var(--text-secondary);
@@ -377,38 +390,44 @@ body {
   white-space: nowrap;
 }
 
-.layout-btn.active {
+.layout-btn.active, .layout-btn-bn.active, .lang-btn.active {
   background-color: var(--text-primary);
   color: var(--bg-primary);
   font-weight: 700;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
 }
 
-[data-theme="light"] .layout-btn.active {
+[data-theme="light"] .layout-btn.active, [data-theme="light"] .layout-btn-bn.active, [data-theme="light"] .lang-btn.active {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.layout-btn:hover:not(.active) {
+.layout-btn:hover:not(.active), .layout-btn-bn:hover:not(.active), .lang-btn:hover:not(.active) {
   color: var(--text-primary);
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-[data-theme="light"] .layout-btn:hover:not(.active) {
+[data-theme="light"] .layout-btn:hover:not(.active), [data-theme="light"] .lang-btn:hover:not(.active) {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
 /* Secondary toolbar inputs row for detail specimens */
 .toolbar-details-row {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
   border-top: 1px solid var(--border-primary);
   padding-top: 1.5rem;
 }
 
+.toolbar-details-row.spec-row {
+  border-top: none;
+  padding-top: 0;
+}
+
 @media (min-width: 768px) {
-  .toolbar-details-row {
-    grid-template-columns: 2fr 1fr;
+  .toolbar-details-row.spec-row {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -552,11 +571,27 @@ body {
 
 .line-secondary {
   margin-bottom: 0.35rem;
+  text-align: center;
   transition: all var(--transition-normal);
 }
 
 .line-primary {
+  text-align: center;
   transition: all var(--transition-normal);
+}
+
+/* Force center alignment on all card body font targets */
+.card-body > div,
+[class*="-target"] {
+  text-align: center;
+}
+
+[class*="-target"]:not([class*="line-"]) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 /* Card Footer Design Tip */
@@ -992,7 +1027,7 @@ body {
   background: transparent;
 }
 
-.color-picker-wrapper:hover .color-dropdown {
+.color-dropdown.show {
   display: flex;
 }
 
@@ -1094,12 +1129,12 @@ body {
   left: 50%;
   transform: translate(-50%, -55%);
   pointer-events: none;
-  font-size: 2.8rem !important;
+  font-size: 2.8rem;
   white-space: nowrap;
 }
 
 .font-hidden_gem-target .line-primary, .font-hidden_place-target .line-primary {
-  font-size: 3.2rem !important;
+  font-size: 3.2rem;
   letter-spacing: -1px;
   opacity: 0.95;
 }
@@ -1145,12 +1180,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3.2rem !important;
+  font-size: 3.2rem;
   white-space: nowrap;
   pointer-events: none;
 }
 .font-capture_moment-target .line-primary {
-  font-size: 3.5rem !important;
+  font-size: 3.5rem;
   letter-spacing: -1.5px;
   opacity: 0.95;
 }
@@ -1165,25 +1200,16 @@ body {
   width: 100%;
 }
 .font-nothing_doing-target .line-primary {
-  font-size: 8rem !important;
+  font-size: 3.2rem;
   line-height: 1;
-  opacity: 0.08;
   letter-spacing: 2px;
-  transition: opacity 0.3s ease;
 }
 .pairing-card:hover .font-nothing_doing-target .line-primary {
-  opacity: 0.15;
+  letter-spacing: 3px;
 }
 .font-nothing_doing-target .line-secondary {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.2rem !important;
-  white-space: nowrap;
-  pointer-events: none;
-  color: var(--text-primary);
+  font-size: 1.8rem;
+  color: var(--text-secondary);
 }
 
 .font-nature_ambience-target {
@@ -1221,12 +1247,12 @@ body {
 }
 
 .font-nostalgic_ambiance-target .line-secondary {
-  font-size: 2.2rem !important;
+  font-size: 2.2rem;
   font-weight: 800;
   letter-spacing: -0.5px;
 }
 .font-nostalgic_ambiance-target .line-primary {
-  font-size: 2rem !important;
+  font-size: 2rem;
   font-style: italic;
   margin-top: -0.2rem;
 }
@@ -1288,12 +1314,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3.2rem !important;
+  font-size: 3.2rem;
   white-space: nowrap;
   pointer-events: none;
 }
 .font-capture_moments-target .line-primary {
-  font-size: 3.3rem !important;
+  font-size: 3.3rem;
   letter-spacing: -1px;
   opacity: 0.95;
 }
@@ -1399,13 +1425,13 @@ body {
 
 /* Custom visual styling overrides for styles 37 to 38 */
 .font-explore_unexplored-target .line-primary {
-  font-size: 3.4rem !important;
+  font-size: 3.4rem;
   letter-spacing: -1.5px;
   font-weight: 800;
   text-transform: uppercase;
 }
 .font-explore_unexplored-target .line-secondary {
-  font-size: 1rem !important;
+  font-size: 1.8rem;
   letter-spacing: 0.5px;
   margin-top: 0.1rem;
 }
@@ -1418,12 +1444,12 @@ body {
   color: #38b6ff;
 }
 .font-go_outside-target .line-primary {
-  font-size: 4rem !important;
+  font-size: 3.4rem;
   letter-spacing: 1px;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.15), -1px -1px 0 rgba(255,255,255,0.05);
 }
 .font-go_outside-target .line-secondary {
-  font-size: 2.5rem !important;
+  font-size: 2rem;
   margin-top: -0.3rem;
 }
 
@@ -1479,7 +1505,7 @@ body {
   width: 100%;
 }
 .font-oceans_engines-target .line-primary {
-  font-size: 3.6rem !important;
+  font-size: 3.6rem;
   letter-spacing: 4px;
   text-transform: uppercase;
   font-weight: 300;
@@ -1491,7 +1517,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.8rem !important;
+  font-size: 2.8rem;
   white-space: nowrap;
   pointer-events: none;
   color: #718096 !important;
@@ -1507,7 +1533,7 @@ body {
   width: 100%;
 }
 .font-one_day-target .line-primary {
-  font-size: 3.2rem !important;
+  font-size: 3.2rem;
   font-weight: 800;
   letter-spacing: -1px;
 }
@@ -1517,7 +1543,7 @@ body {
   bottom: 20%;
   left: 53%;
   transform: translateX(-50%);
-  font-size: 1.8rem !important;
+  font-size: 1.8rem;
   font-style: italic;
   font-weight: 500;
   pointer-events: none;
@@ -1533,11 +1559,11 @@ body {
   width: 100%;
 }
 .font-tertawa_keramaian-target .line-secondary {
-  font-size: 3rem !important;
+  font-size: 2.8rem;
   margin-bottom: -0.2rem;
 }
 .font-tertawa_keramaian-target .line-primary {
-  font-size: 1.4rem !important;
+  font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -1706,4 +1732,351 @@ body {
   white-space: nowrap;
   pointer-events: none;
   color: #ffb703 !important;
+}
+
+/* --- Bangla Font Pairing Specimen Targets --- */
+.font-modern_bangla-target .line-primary {
+  font-family: 'Anek Bangla', sans-serif !important;
+}
+.font-modern_bangla-target .line-secondary {
+  font-family: 'Hind Siliguri', sans-serif !important;
+}
+
+.font-literary_bangla-target .line-primary {
+  font-family: 'Tiro Bangla', serif !important;
+  font-style: italic !important;
+}
+.font-literary_bangla-target .line-secondary {
+  font-family: 'Noto Serif Bengali', serif !important;
+}
+
+.font-signature_bangla-target .line-primary {
+  font-family: 'Galada', cursive !important;
+}
+.font-signature_bangla-target .line-secondary {
+  font-family: 'Noto Sans Bengali', sans-serif !important;
+}
+
+.font-playful_bangla-target .line-primary {
+  font-family: 'Baloo Da 2', sans-serif !important;
+}
+.font-playful_bangla-target .line-secondary {
+  font-family: 'Mina', sans-serif !important;
+}
+
+.font-handwritten_bangla-target .line-primary {
+  font-family: 'Atma', cursive !important;
+}
+.font-handwritten_bangla-target .line-secondary {
+  font-family: 'Hind Siliguri', sans-serif !important;
+}
+
+/* --- Dual Input Panels Toolbar Styles --- */
+.workspace-inputs-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .workspace-inputs-layout {
+    flex-direction: row;
+  }
+}
+
+.workspace-panel {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--border-primary);
+  border-radius: 18px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+[data-theme="light"] .workspace-panel {
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+.panel-header {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-primary);
+  border-bottom: 1px dashed var(--border-primary);
+  padding-bottom: 0.5rem;
+}
+
+.panel-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 480px) {
+  .panel-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- Dedicated Bengali Specimen Container --- */
+.bengali-specimen-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  border-top: 1px solid var(--border-primary);
+  padding-top: 3.5rem;
+  margin-top: 1.5rem;
+}
+
+/* --- Illustrator-Style Line Spacing (Leading) Custom Widget --- */
+.leading-control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.leading-control-group label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.leading-input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 50px;
+  padding: 0.3rem 0.8rem 0.3rem 0.9rem;
+  gap: 0.4rem;
+  height: 38px;
+  transition: border-color var(--transition-normal);
+}
+
+.leading-input-wrapper:focus-within {
+  border-color: var(--accent-purple);
+}
+
+.leading-icon-span {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+.leading-num-input {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  width: 42px;
+  text-align: right;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.leading-num-input:focus {
+  outline: none;
+}
+
+.leading-num-input::-webkit-outer-spin-button,
+.leading-num-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.leading-num-input {
+  -moz-appearance: textfield;
+}
+
+.leading-unit {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  margin-right: 0.2rem;
+  user-select: none;
+}
+
+.leading-spin-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid var(--border-primary);
+  padding-left: 0.4rem;
+  gap: 1px;
+}
+
+.spin-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.45rem;
+  line-height: 0.9;
+  padding: 1px 3px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  user-select: none;
+}
+
+.spin-btn:hover {
+  color: var(--text-primary);
+}
+
+.spin-btn:active {
+  color: var(--accent-purple);
+}
+
+/* Establish boundary section container for sticky toolbars */
+.section-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Compact One-Line Workspace Controls */
+.controls-toolbar.compact {
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  gap: 0;
+}
+
+.controls-toolbar.compact .toolbar-title {
+  display: none;
+}
+
+.toolbar-single-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.toolbar-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%;
+  padding: 0.35rem 0;
+}
+
+.toolbar-row + .toolbar-row {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 0.3rem;
+  padding-top: 0.6rem;
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--border-primary);
+  margin: 0 0.5rem;
+  opacity: 0.5;
+}
+
+.input-field-group.compact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.input-field-group.compact label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.input-field-group.compact input {
+  height: 34px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.toggle-field-group.compact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.toggle-field-group.compact label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.toggle-field-group.compact .toggle-btn-group {
+  padding: 2px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-field-group.compact .layout-btn,
+.toggle-field-group.compact .layout-btn-bn {
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  border-radius: 8px;
+}
+
+.leading-control-group.compact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.leading-control-group.compact label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.leading-control-group.compact .leading-input-wrapper {
+  height: 34px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+}
+
+.leading-control-group.compact .leading-icon-span svg {
+  width: 14px;
+  height: 14px;
+}
+
+.leading-control-group.compact .leading-num-input {
+  font-size: 0.85rem;
+  width: 32px;
+  height: 24px;
+}
+
+.leading-control-group.compact .leading-unit {
+  font-size: 0.65rem;
 }
